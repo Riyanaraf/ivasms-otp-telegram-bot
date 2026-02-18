@@ -7,10 +7,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-EMAIL = os.getenv("EMAIL")
-PASSWORD = os.getenv("PASSWORD")
-TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
-CHAT_ID = os.getenv("CHAT_ID")
+EMAIL = os.getenv("riyanibneearafat@gmail.com")
+PASSWORD = os.getenv("Arko1627")
+TELEGRAM_TOKEN = os.getenv("8560175760:AAGzWPyLnrjbGWcXpi0DfZYQq2DvaFAd9iI")
+CHAT_ID = os.getenv("6715937373")
 
 bot = Bot(token=TELEGRAM_TOKEN)
 session = requests.Session()
