@@ -12,7 +12,7 @@ PASSWORD = os.getenv("Arko1627")
 TELEGRAM_TOKEN = os.getenv("8560175760:AAGzWPyLnrjbGWcXpi0DfZYQq2DvaFAd9iI")
 CHAT_ID = os.getenv("6715937373")
 
-bot = Bot(token=TELEGRAM_TOKEN)
+bot = Bot(token=8560175760:AAGzWPyLnrjbGWcXpi0DfZYQq2DvaFAd9iI)
 session = requests.Session()
 
 def login():
