@@ -7,12 +7,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-EMAIL = os.getenv("EMAIL")
-PASSWORD = os.getenv("PASSWORD")
-TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
-CHAT_ID = os.getenv("CHAT_ID")
+EMAIL = os.getenv("riyanibneearafat@gmail.com")
+PASSWORD = os.getenv("Arko1627")
+TELEGRAM_TOKEN = os.getenv("8560175760:AAGzWPyLnrjbGWcXpi0DfZYQq2DvaFAd9iI")
+CHAT_ID = os.getenv("6715937373")
 
-bot = Bot(token=TELEGRAM_TOKEN)
+bot = Bot(token=8560175760:AAGzWPyLnrjbGWcXpi0DfZYQq2DvaFAd9iI)
 session = requests.Session()
 
 def login():
@@ -35,6 +35,24 @@ def main():
     if not login():
         print("❌ Login failed.")
         return
+
+    print("✅ Logged in.")
+    seen = set()
+
+    while True:
+        try:
+            for msg in get_latest_sms():
+                if msg and msg not in seen:
+                    bot.send_message(chat_id=CHAT_ID, text=f"🔐 OTP: {msg}")
+                    print("✅ Sent OTP:", msg)
+                    seen.add(msg)
+            time.sleep(15)
+        except Exception as e:
+            print("⚠️ Error:", e)
+            time.sleep(30)
+
+if __name__ == "__main__":
+    main()        return
 
     print("✅ Logged in.")
     seen = set()
